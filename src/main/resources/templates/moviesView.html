@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AOP Movies List</title>
+</head>
+<body>
+<table border="1" cellpadding="4">
+    <thead>
+    <tr>
+        <th> Tittle </th>
+        <th> Producer </th>
+        <th> Year </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="movie : ${movies}">
+        <td><span th:text="${movie.getTittle()}"> Tittle </span></td>
+        <td><span th:text="${movie.getFilmProducer()}"> Producer </span></td>
+        <td><span th:text="${movie.getYearOfProduction()}"> Year </span></td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>AOP ADD MOVIE</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Add New Movie</h1>
+<form action="#" th:action="@{/add-movie}" th:object="${movie}" method="post">
+    <p>Tittle: <input type="text" th:field="*{tittle}" /></p>
+    <p>Producer: <input type="text" th:field="*{filmProducer}" /></p>
+    <p>Year: <input type="text" th:field="*{yearOfProduction}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
